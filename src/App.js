@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import AddBookmark from './AddBookmark/AddBookmark';
 import BookmarkList from './BookmarkList/BookmarkList';
+import Rating from './Rating/Rating'
 import Nav from './Nav/Nav';
 import config from './config';
 import bookmarksContext from "./BookmarksContext";
@@ -93,6 +94,7 @@ class App extends Component {
     return (
       <main className='App'>
         <h1>Bookmarks!</h1>
+        <Rating value={5}></Rating>
         <BookmarksContext.Provider value={contextValue}>
         <Nav />
           <div className='content' aria-live='polite'>
